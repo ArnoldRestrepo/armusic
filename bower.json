@@ -1,0 +1,27 @@
+{
+  "name": "ar-music",
+  "authors": [
+    "Arnold Restrepo <restrepo_arnold@outlook.com>"
+  ],
+  "description": "Plataforma para escuchar mis canciones favoritas sin interrupciones.",
+  "main": "",
+  "keywords": [
+    "HTML5",
+    "Boostrap",
+    "JavaScript",
+    "Front-end"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "boostrap#^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,49 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title ar-music
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Advent+Pro|Oxygen")
+        link(href="css/bootstrap.min.css", rel="stylesheet")
+        link(href="css/app.css", rel="stylesheet")
+    
+    body
+        header.Header.u-colorBase.container-fluid
+            nav.navbar
+                .container
+                    //- Mobile Menú 
+                    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#menu', aria-expanded='false')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    .navbar-header
+                        h2.navbar-brand AR-MUSIC
+                    //- Normal Menú
+                    .collapse-navbar-collapse#menu
+                        ul.nav.navbar-nav
+                            - var items = ["API","SOBRE NOSOTROS","BLOG","AUTOR"]
+                            each list in items
+                                li
+                                    a= list
+                                
+                                
+
+
+
+
+            
+
+    
+        script(src="js/jquery.min.js")
+        script(src="js/bootstrap.min.js")
+        script(src="js/app.js")
+        script#__bs_script__.
+            //<![CDATA[
+            document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\\/script>".replace("HOST", location.hostname));
+            //]]>
+    
+    
+    
