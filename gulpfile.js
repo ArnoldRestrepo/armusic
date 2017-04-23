@@ -2,12 +2,12 @@
  * Modules Requires for Gulp
  */
 
-const gulp 							= require('gulp'),
-			sass 							= require('gulp-sass'),
-			pug  							= require('gulp-pug'),
+	  const gulp 					= require('gulp'),
+			sass 					= require('gulp-sass'),
+			pug  					= require('gulp-pug'),
 			autoprefixer 			= require('gulp-autoprefixer'),
-			concat 						= require('gulp-concat'),
-			uglify 						= require('gulp-uglify'),
+			concat 					= require('gulp-concat'),
+			uglify 					= require('gulp-uglify'),
 			browserSync 			= require('browser-sync').create();
 
 
@@ -67,10 +67,12 @@ const gulp 							= require('gulp'),
 
 					gulp.task('sass', function(){
 						gulp.src(pathSource.css + "*.scss")
-							.pipe(sass({
-								outputStyle: 'expanded',
-								sourceComments: false
-							}))
+							.pipe(sass({ 
+								outputStyle: 'compressed',
+								sourceComments: 'false' 
+							})
+								.on('error', sass.logError)
+							)
 							.pipe(autoprefixer({
 								versions: ['last 2 browsers']
 							}))
@@ -87,6 +89,5 @@ const gulp 							= require('gulp'),
 							gulp.src(pathSource.js + '*.js')
 								.pipe(uglify())
 								.pipe(gulp.dest(pathDest.js));
-							
 							browserSync.reload();
 					});

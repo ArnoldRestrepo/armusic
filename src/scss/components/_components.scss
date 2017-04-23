@@ -1,6 +1,53 @@
-/* Titulos */
+/**
+*  AR-MUSIC
+*  
+*  Typography
+*  
+*/
+
+// Helper Guides
+/*div[class*="col-"]{
+    border: 1px solid red;
+}
+
+.row{
+     border: 1px solid purple;
+}*/
+
+
+//  Typography
+$titleFont: 'Advent Pro', serif;
+$textFont: 'Oxygen', serif;
+
 h1,h2,h3,h4,h5,h6{
-    font-family: 'Advent Pro', sans-serif;
+    font-family: $titleFont;
     font-weight: bolder;
 }
+p,strong,small,a{
+    font-family: $textFont;
+}
+
+// Colors
+$white:     #e8eff1;
+$darkBlue:  #0b4f6c;
+$lightBlue: #01859c;
+$darkGray:  #2f3233;
+$grayText:  #656b6f;
+
+
+// Helpers
+
+.u-baseColor{
+    background: $lightBlue;
+}
+
+.ul-transition{
+    transition: all ease-in 300ms;
+}
+
+
+
+
+
+
 

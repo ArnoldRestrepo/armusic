@@ -1,9 +1,1 @@
-/* Titulos */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Advent Pro', sans-serif;
-  font-weight: bolder;
-}
-
-header {
-  color: blue;
-}
+/* line 22, src/scss/components/_components.scss */h1,h2,h3,h4,h5,h6{font-family:"Advent Pro",serif;font-weight:bolder}/* line 26, src/scss/components/_components.scss */p,strong,small,a{font-family:"Oxygen",serif}/* line 40, src/scss/components/_components.scss */.u-baseColor{background:#01859c}/* line 44, src/scss/components/_components.scss */.ul-transition{-webkit-transition:all ease-in 300ms;transition:all ease-in 300ms}/* line 1, src/scss/components/_header.scss */.Header{height:100vh;background:#01859c url(../img/discover.jpg) center bottom/100% 70% no-repeat}/* line 6, src/scss/components/_header.scss */.Header-title{color:#e8eff1;font-family:"Advent Pro",serif;font-weight:bolder}/* line 11, src/scss/components/_header.scss */.Header-title.is-hover:hover{color:#e8eff1}@media (max-width: 768px){/* line 17, src/scss/components/_header.scss */.Header{height:300px;background:#01859c url(../img/discover.jpg) center bottom/contain no-repeat}}/* line 1, src/scss/components/_nav.scss */.Nav{margin-top:30px}/* line 3, src/scss/components/_nav.scss */.Nav .navbar-toggle .icon-bar{background:#e8eff1}/* line 8, src/scss/components/_nav.scss */.Nav-ul{margin-left:15%}/* line 12, src/scss/components/_nav.scss */.Nav-ul li a{font-weight:700;color:#e8eff1}/* line 16, src/scss/components/_nav.scss */.Nav-ul.is-hover>li>a:hover{color:#e8eff1;text-decoration:underline;background:transparent}@media (max-width: 768px){/* line 25, src/scss/components/_nav.scss */.Nav{margin-top:0;z-index:99;background:#01859c;border-bottom:0.5px solid #2f3233}/* line 31, src/scss/components/_nav.scss */.Nav-ul{margin:0px 15px;background:#01859c}}/* line 1, src/scss/components/_main.scss */header{color:blue}

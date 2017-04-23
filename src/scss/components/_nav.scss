@@ -1,0 +1,35 @@
+.Nav{
+    margin-top: 30px;
+    .navbar-toggle .icon-bar{
+        background: $white;    
+    }
+}
+
+.Nav-ul{
+    margin-left: 15%;
+}
+
+.Nav-ul li a{
+    font-weight: 700;
+    color: $white;
+}
+.Nav-ul.is-hover > li > a:hover{
+    color: $white;
+    text-decoration: underline;
+    background: transparent;
+}
+
+
+
+@media (max-width: 768px) {
+    .Nav{
+        margin-top: 0;
+        z-index: 99;
+        background: $lightBlue;
+        border-bottom: .5px solid $darkGray;
+    }
+    .Nav-ul{
+        margin: 0px 15px;
+        background: darken($lightBlue, .0);
+    }
+}
