@@ -1,0 +1,1 @@
+jQuery(function(){jQuery(".navbar-toggle").on("click",function(){jQuery(".Description").fadeToggle()})});

@@ -6,31 +6,15 @@ html(lang="es")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title ar-music
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Advent+Pro|Oxygen")
+        link(href="file.css", rel="stylesheet")
         link(href="css/bootstrap.min.css", rel="stylesheet")
         link(href="css/app.css", rel="stylesheet")
     
     body
-        header.Header
-                .container-fluid
-                    .row
-                        .Nav.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.col-xm-12.navbar-fixed-top
-                            .navbar-header
-                                //- Mobile Menú 
-                                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#menu', aria-expanded='false')
-                                    span.sr-only Toggle navigation
-                                    span.icon-bar
-                                    span.icon-bar
-                                    span.icon-bar
-                                a(href="#").navbar-brand.Header-title.is-hover AR-MUSIC
-                            //- Normal Menú
-                            .collapse-navbar-collapse#menu
-                                ul.nav.navbar-nav.Nav-ul.is-hover
-                                    - var items = ["API","SOBRE NOSOTROS","BLOG","AUTOR"]
-                                    each list in items
-                                        li
-                                            a.ul-transition= list
-                                ul.nav.navbar-nav.navbar-right
-                    .row
+        include ./partials/header
+                    
+                            
+
 
 
 

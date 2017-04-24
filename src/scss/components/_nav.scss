@@ -6,22 +6,26 @@
 }
 
 .Nav-ul{
-    margin-left: 15%;
+    margin-left: 18%;
 }
 
-.Nav-ul li a{
+.Nav-ul li a, .Login li a{
     font-weight: 700;
     color: $white;
+    cursor: pointer;
 }
-.Nav-ul.is-hover > li > a:hover{
+.Nav-ul.is-hover > li > a:hover, .Login > li > a:hover, 
+.Nav-ul.is-hover > li > a:focus, .Login > li > a:focus {
     color: $white;
     text-decoration: underline;
     background: transparent;
 }
 
-
-
 @media (max-width: 768px) {
+    #menu{
+        width: 100%;
+        
+    }
     .Nav{
         margin-top: 0;
         z-index: 99;
@@ -32,4 +36,21 @@
         margin: 0px 15px;
         background: darken($lightBlue, .0);
     }
+    .Login li a{
+        margin-left: 30px; 
+    }
+
+    .Login-start:after, .Login-galery:after{
+        margin-left: 5px;
+        text-transform: uppercase;
+    }
+
+    .Login-start:after{
+        content: 'Login';
+    }
+
+    .Login-galery:after{
+        content: 'Galería';
+    }
+
 }

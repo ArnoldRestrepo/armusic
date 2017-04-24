@@ -1,0 +1,37 @@
+header.Header
+	.container-fluid
+		.row
+			.Nav.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.col-xs-12
+				.navbar-header
+					//- Mobile Menú 
+					button.navbar-toggle.collapsed(type="button"  data-toggle="collapse" data-target="#menu" aria-expanded="true")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a(href="index.html").navbar-brand.Header-title.is-hover AR-MUSIC
+				//- Normal Menú
+				#menu.collapse.navbar-collapse
+					ul.nav.navbar-nav.Nav-ul.is-hover
+						- var items = ["API","SOBRE NOSOTROS","BLOG","AUTOR"]
+						each list in items
+							li
+								a.ul-transition= list
+					ul.nav.navbar-nav.navbar-right.Login.is-hover
+						li
+							a(href="#", title="Ingresar").Login-start
+								span.glyphicon.glyphicon-user
+						li
+							a(href="#", title="Galería").Login-galery
+								span.glyphicon.glyphicon-picture
+
+		.row
+			.Description.col-12.text-center
+				h1.Description-title
+					| TUS PLAYLISTS FAVORITAS
+					br
+					| A UN SOLO CLICK
+				p.Description-subtitle
+					| Tu mundo es una canción 
+					br
+					| y en ar-music lo sabemos...

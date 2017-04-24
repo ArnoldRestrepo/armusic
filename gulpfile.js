@@ -8,6 +8,7 @@
 			autoprefixer 			= require('gulp-autoprefixer'),
 			concat 					= require('gulp-concat'),
 			uglify 					= require('gulp-uglify'),
+			gutil 					= require('gulp-util'),
 			browserSync 			= require('browser-sync').create();
 
 
@@ -41,7 +42,7 @@
 							server: pathDest.root
 						});
 
-						gulp.watch(pathSource.root + "*.pug", ['html']).on("change", browserSync.reload);
+						gulp.watch(pathSource.root + "**/*.pug", ['html']).on("change", browserSync.reload);
 						gulp.watch(pathSource.css + "**/*.scss", ['sass']);
 						gulp.watch(pathSource.js + "*.js", ['js']);
 
@@ -87,7 +88,7 @@
 
 					gulp.task('js', function() {
 							gulp.src(pathSource.js + '*.js')
-								.pipe(uglify())
+								.pipe(uglify().on('error', gutil.log))
 								.pipe(gulp.dest(pathDest.js));
 							browserSync.reload();
 					});
