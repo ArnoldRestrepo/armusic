@@ -19,12 +19,56 @@
 $titleFont: 'Advent Pro', serif;
 $textFont: 'Oxygen', serif;
 
+body{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 h1,h2,h3,h4,h5,h6{
     font-family: $titleFont;
     font-weight: bolder;
 }
-p,strong,small,a{
+p,strong,small,a,button,strong,b{
     font-family: $textFont;
+}
+
+/* Vertical Rhythm */
+h2{
+    font-size: 1.83333em;
+    line-height: 1.6364em;
+    margin: 1.6364em 0;
+}
+
+h3{
+    font-size: 1.6667em;
+    line-height: 1.8em;
+    margin: 1.8em 0;
+}
+
+
+h4{
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 2em 0;
+}
+
+h5{
+    font-size: 1.3333em;
+    line-height: 1.125em;
+    margin: 2.25em 0;
+}
+
+h6{
+    font-size: 1.1667em;
+    line-height: 1.2857em;
+    margin: 2.5714em 0;
+}
+
+
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 1.5em 0;
 }
 
 // Colors
@@ -33,6 +77,7 @@ $darkBlue:  #0b4f6c;
 $lightBlue: #01859c;
 $darkGray:  #2f3233;
 $grayText:  #656b6f;
+$greenBtn:  #00984b;
 
 
 // Helpers
@@ -50,6 +95,20 @@ $grayText:  #656b6f;
     transition: all ease-in 1000ms;
 }
 
+.u-btnGreen{
+    border-radius: 35px;
+    padding: 0 2.8em;
+    line-height: 2.8em;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background: $greenBtn;
+}
+
+.u-btnGreen:hover,.u-btnGreen:focus{
+    color: $white;
+    background: darken($greenBtn, 10%);
+}
 
 
 

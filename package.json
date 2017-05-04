@@ -4,7 +4,8 @@
   "description": "Plataforma para escuchar mis canciones favoritas sin interrupciones.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf node_modules && rm -rf bower_components"
   },
   "repository": {
     "type": "git",
