@@ -1,1 +1,1 @@
-jQuery(function(){jQuery(".navbar-toggle").on("click",function(){jQuery(".Description").fadeToggle()})});
+jQuery(function(){jQuery(".navbar-toggle").on("click",function(){jQuery(".Description").fadeToggle()}),jQuery(".owl-carousel").owlCarousel({center:!0,items:3,loop:!0,nav:!0,navText:["Anterior","Siguiente"],margin:100,stagePadding:80,responsive:{1e3:{items:3},600:{stagePadding:0,margin:10,items:2},0:{stagePadding:10,items:1}}})});

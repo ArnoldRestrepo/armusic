@@ -1,0 +1,32 @@
+.CommunityContainer{
+    margin: 40px auto;
+}
+
+.Comments-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+
+    &-img{
+        max-width: 150px;        
+    }
+
+}
+
+// .owl-dots  {
+//     display: flex;
+//     align-items: center;
+//     span{
+//         background: none repeat scroll 0 0 #869791;
+//         border-radius: 20px;
+//         display: inline-block;
+//         height: 12px;
+//         margin: 5px 7px;
+//         opacity: 0.5;
+//         width: 12px;
+//     }
+    
+// }

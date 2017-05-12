@@ -20,13 +20,12 @@ $titleFont: 'Advent Pro', serif;
 $textFont: 'Oxygen', serif;
 
 body{
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: $titleFont;
-    font-weight: bolder;
 }
 p,strong,small,a,button,strong,b{
     font-family: $textFont;
@@ -37,12 +36,14 @@ h2{
     font-size: 1.83333em;
     line-height: 1.6364em;
     margin: 1.6364em 0;
+    font-weight: 800;
 }
 
 h3{
     font-size: 1.6667em;
     line-height: 1.8em;
     margin: 1.8em 0;
+    font-weight: 700;
 }
 
 
@@ -50,18 +51,21 @@ h4{
     font-size: 1.5em;
     line-height: 1em;
     margin: 2em 0;
+    font-weight: 500;
 }
 
 h5{
     font-size: 1.3333em;
     line-height: 1.125em;
     margin: 2.25em 0;
+    font-weight: 500;
 }
 
 h6{
     font-size: 1.1667em;
     line-height: 1.2857em;
     margin: 2.5714em 0;
+    font-weight: 500;
 }
 
 
@@ -110,7 +114,9 @@ $greenBtn:  #00984b;
     background: darken($greenBtn, 10%);
 }
 
-
+.u-shadow{
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+}
 
 
 
