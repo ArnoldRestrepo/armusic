@@ -99,19 +99,33 @@ $greenBtn:  #00984b;
     transition: all ease-in 1000ms;
 }
 
-.u-btnGreen{
-    border-radius: 35px;
-    padding: 0 2.8em;
-    line-height: 2.8em;
+.u-btnGreen, .u-btnBlue{
+    border-radius: 30px;
+    padding: 0 2em;
+    border: none;
+    line-height: 2.5em;
     color: $white;
     text-transform: uppercase;
     font-weight: bolder;
+}
+
+.u-btnGreen{
     background: $greenBtn;
 }
+
+.u-btnBlue{
+    background: $darkBlue;
+}
+
 
 .u-btnGreen:hover,.u-btnGreen:focus{
     color: $white;
     background: darken($greenBtn, 10%);
+}
+
+.u-btnBlue:hover,.u-btnBlue:focus{
+    color: $white;
+    background: darken($darkBlue, 10%);
 }
 
 .u-shadow{

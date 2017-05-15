@@ -4,6 +4,7 @@
 
 	  const gulp 					= require('gulp'),
 			sass 					= require('gulp-sass'),
+			sourcemaps 				= require('gulp-sourcemaps'),
 			pug  					= require('gulp-pug'),
 			autoprefixer 			= require('gulp-autoprefixer'),
 			concat 					= require('gulp-concat'),
@@ -68,6 +69,7 @@
 
 					gulp.task('sass', function(){
 						gulp.src(pathSource.css + "*.scss")
+							.pipe(sourcemaps.init())
 							.pipe(sass({ 
 								outputStyle: 'compressed',
 								sourceComments: 'false' 
@@ -77,6 +79,7 @@
 							.pipe(autoprefixer({
 								versions: ['last 2 browsers']
 							}))
+							.pipe(sourcemaps.write())
 							.pipe(gulp.dest(pathDest.css))
 							.pipe(browserSync.stream());
 					});
