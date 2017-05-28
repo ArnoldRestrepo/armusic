@@ -22,6 +22,11 @@ $textFont: 'Oxygen', serif;
 body{
     font-size: 16px;
     line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.container, .container-fluid{
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -90,7 +95,7 @@ $greenBtn:  #00984b;
     background: $lightBlue;
 }
 
-.ul-transition{
+.u-transition{
     transition: all ease-in 300ms;
 }
 
@@ -117,6 +122,15 @@ $greenBtn:  #00984b;
     background: $darkBlue;
 }
 
+.u-btnVideo{
+    background: $lightBlue;
+    color: $white;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    font-size: 40px;
+}
 
 .u-btnGreen:hover,.u-btnGreen:focus{
     color: $white;
@@ -131,6 +145,7 @@ $greenBtn:  #00984b;
 .u-shadow{
     box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
 }
+
 
 
 

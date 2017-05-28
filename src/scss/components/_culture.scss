@@ -1,0 +1,56 @@
+.Culture{
+    &-container{
+        padding: 48px 0;
+        background: $darkBlue;
+    }
+
+    &-title{
+        color: $white;
+        font-weight: bolder;
+        margin-bottom: 48px;
+    }
+
+    &-play-btn span{
+        color: $white;
+        margin-left: 5px;
+    }
+
+    &-play-btn span:hover{
+        color: darken($white, .6);
+        font-size: 42px;
+        margin-left: 8px;
+    }
+
+    &-description{
+        color: $white;
+    }
+
+}
+
+.ModalContent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 0;
+    background: rgba(0, 0, 0, .99);
+    z-index: 99;
+}
+
+.Modal-close span{
+    font-size: 14px;
+}
+
+iframe{
+    display: block;
+    width: 760px;
+    height: 515px;
+    margin: 0 auto;
+    border: none;
+}

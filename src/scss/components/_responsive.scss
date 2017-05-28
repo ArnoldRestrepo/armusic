@@ -1,0 +1,28 @@
+@media (max-width: 1024px) {
+    iframe{
+         width: 560px;
+         height: 415px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Features-limit-img, .Features-invest-img{
+        display: none
+    }
+
+    .ModalContent{
+      
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .Modal-close span{
+        font-size: 24px;
+    }
+    
+    iframe{
+         width: 345px;
+         height: 200px;
+    }
+}

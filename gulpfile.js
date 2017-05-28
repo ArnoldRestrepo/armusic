@@ -10,6 +10,10 @@
 			concat 					= require('gulp-concat'),
 			uglify 					= require('gulp-uglify'),
 			gutil 					= require('gulp-util'),
+			browserify 				= require('browserify'),
+			babelify 				= require('babelify'),
+			source 					= require('vinyl-source-stream'),
+			buffer					= require('vinyl-buffer'),
 			browserSync 			= require('browser-sync').create();
 
 
@@ -29,7 +33,8 @@
 			var pathDest = {
 				root:   'public/',
 				css:    'public/css',
-				js:     'public/js'
+				js:     'public/js',
+				maps:   'public/maps'
 			}
 
 /**************************************************************************************************
@@ -45,7 +50,7 @@
 
 						gulp.watch(pathSource.root + "**/*.pug", ['html']).on("change", browserSync.reload);
 						gulp.watch(pathSource.css + "**/*.scss", ['sass']);
-						gulp.watch(pathSource.js + "*.js", ['js']);
+						gulp.watch(pathSource.js + "*.js", ['js']).on("change", browserSync.reload());
 
 				});
 
@@ -79,7 +84,7 @@
 							.pipe(autoprefixer({
 								versions: ['last 2 browsers']
 							}))
-							.pipe(sourcemaps.write())
+							.pipe(sourcemaps.write('./maps'))
 							.pipe(gulp.dest(pathDest.css))
 							.pipe(browserSync.stream());
 					});
@@ -90,8 +95,13 @@
 					*/
 
 					gulp.task('js', function() {
-							gulp.src(pathSource.js + '*.js')
-								.pipe(uglify().on('error', gutil.log))
-								.pipe(gulp.dest(pathDest.js));
-							browserSync.reload();
+						return browserify({entries: pathSource.js + 'app.js', debug: true})
+							.transform("babelify", { presets: ["es2015"] })
+							.bundle()
+							.pipe(source('app.js'))
+							.pipe(buffer())
+							.pipe(sourcemaps.init())
+							.pipe(uglify())
+							.pipe(sourcemaps.write('./maps'))
+							.pipe(gulp.dest(pathDest.js));
 					});
