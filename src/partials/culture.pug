@@ -1,18 +1,31 @@
-.container-fluid.Culture-container#Culture
-        section.Culture-section.text-center
-            .row
-                .col-12
-                    h2.Culture-title
-                        | MÁS INFORMACIÓN SOBRE 
-                        br
-                        | NUESTRA CULTURA
-                    button#Play.u-btnVideo
-                        a(href="https://www.youtube.com/watch?v=h765SXRP9U0", title="Nuestra Cultura").modal-youtube.Culture-play-btn
-                            span.glyphicon.glyphicon-play.u-transition
-                    p.Culture-description
-                        |  Lorem ipsum dolor sit amet, 
-                        br
-                        | consectetur  adipisicing elit. Fuga, aliquam!
-                    #ModalContainer
+#Culture.row.Culture-container
+    section.Culture-section.text-center.col-xs-12
+            h2.Culture-title
+                | MÁS INFORMACIÓN SOBRE 
+                br
+                | NUESTRA CULTURA
+            // Button trigger modal
+            button.u-btnVideo(type='button', data-toggle='modal', data-target='#videoModal')
+                span.glyphicon.glyphicon-play.u-transition
+            p.Culture-description
+                |  Lorem ipsum dolor sit amet, 
+                br
+                | consectetur  adipisicing elit. Fuga, aliquam!
+
+
+
+// Modal
+#videoModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+  .modal-dialog.modal-lg(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true').glyphicon.glyphicon-remove
+      .modal-body
+        .embed-responsive.embed-responsive-16by9
+            iframe(align='center', src='https://www.youtube.com/embed/h765SXRP9U0', allowfullscreen='').embed-responsive-item
+
+
+                
 
         

@@ -22,12 +22,9 @@ $textFont: 'Oxygen', serif;
 body{
     font-size: 16px;
     line-height: 1.5;
-    overflow-x: hidden;
+
 }
 
-.container, .container-fluid{
-    overflow-x: hidden;
-}
 
 h1,h2,h3,h4,h5,h6{
     font-family: $titleFont;
@@ -120,6 +117,19 @@ $greenBtn:  #00984b;
 
 .u-btnBlue{
     background: $darkBlue;
+}
+
+.u-btnSubmit{
+    background: $lightBlue;
+    color: $white;
+    border-radius: 30px;
+    // padding-left: 2em;
+    // padding-right: 2em;
+    font-weight: bolder;
+}
+
+.u-btnSubmit:hover{
+    color: lighten($white, 50%);
 }
 
 .u-btnVideo{

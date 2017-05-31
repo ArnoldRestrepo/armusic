@@ -1,0 +1,26 @@
+.Newsletter{
+    &-container{
+        background: $darkBlue;
+        padding-bottom: 1.8em; 
+    }
+    
+
+    &-title, &-description{
+        color: $white;
+    }
+
+    &-form{
+        input.form-control{
+            background: darken($lightBlue, 7%);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: $white;
+        }
+
+        input.form-control::placeholder{
+            color: $white;
+            font-weight: 300;
+        }
+    }
+
+}

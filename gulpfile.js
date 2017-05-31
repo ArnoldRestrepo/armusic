@@ -50,7 +50,7 @@
 
 						gulp.watch(pathSource.root + "**/*.pug", ['html']).on("change", browserSync.reload);
 						gulp.watch(pathSource.css + "**/*.scss", ['sass']);
-						gulp.watch(pathSource.js + "*.js", ['js']).on("change", browserSync.reload());
+						gulp.watch(pathSource.js + "*.js", ['js']);
 
 				});
 

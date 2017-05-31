@@ -31,6 +31,11 @@ jQuery(function(){
         }
     });
     
+
+    jQuery('#myModal').on('shown.bs.modal', function () {
+        jQuery('#myInput').focus();
+    });
+
 });
 
 

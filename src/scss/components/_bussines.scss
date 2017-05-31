@@ -1,0 +1,26 @@
+.Bussines-container{
+   padding-top: 48px; 
+   padding-bottom: 48px;
+
+   .Step-one{
+       &-icon{
+       }
+       &-icon span{
+           font-size: 7em;
+           color: $greenBtn;
+       }
+
+       &-description{
+            font-weight: regular;
+       }
+   }
+
+   .Steps{
+       &-icon{
+            font-size: 1.83333em;
+            line-height: 1.6364em;
+            margin-top: .6em;
+            font-weight: 800;
+       }
+   }
+}
