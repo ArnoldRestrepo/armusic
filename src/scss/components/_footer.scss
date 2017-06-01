@@ -1,0 +1,15 @@
+.Footer{
+    &-container{
+        padding-top: 1.8em;
+        padding-bottom: 1.8em;
+        background: $darkGray;
+    }
+}
+
+@media (max-width: 768px) {
+    .Footer{
+        &-container{
+            padding: 1.8em 1.8em;
+        }
+    }
+}
